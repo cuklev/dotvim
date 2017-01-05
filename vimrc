@@ -29,7 +29,7 @@ else
 	autocmd FileType c          setlocal makeprg=gcc\ '%'\ -o\ '%:r'\ -std=gnu11\ -Wall
 	autocmd FileType cpp        setlocal makeprg=g++\ '%'\ -o\ '%:r'\ -std=gnu++1z\ -Wall
 	autocmd FileType haskell    setlocal makeprg=ghc\ --make\ '%'
-	autocmd Filetype cs         setlocal makeprg=mcs\ '%'\ -r:System.Numerics\ -out:'%:r'
+	autocmd Filetype cs         setlocal makeprg=mcs\ '%'\ -r:System.Numerics
 	autocmd Filetype rust		setlocal makeprg=rustc\ '%'\ -o\ '%:r'
 
 	autocmd FileType sh         setlocal makeprg=true
