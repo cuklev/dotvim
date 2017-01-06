@@ -79,7 +79,7 @@ function! ExecuteFile()
 	elseif &filetype == "c" || &filetype == "cpp" || &filetype == "haskell" || &filetype == "rust"
 		!'%:p:r'
 	elseif &filetype == "cs"
-		!mono '%:p:r'
+		!mono '%:p:r.exe'
 	endif
 endfunction
 
