@@ -105,7 +105,7 @@ nmap <C-H> <C-W>h
 
 set langmap=чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM
 
-let g:ycm_global_ycm_extra_conf = '/etc/vim/ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 set completeopt-=preview
 
 "let g:syntastic_c_compiler_options = '-std=gnu11'
