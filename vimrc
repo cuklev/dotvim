@@ -89,6 +89,8 @@ nmap <F10> :call ExecuteFile()<CR>
 "nmap <C-D> :ConqueTermSplit zsh<CR>
 nmap <Tab> mtgg=G't
 
+nmap  :noh<CR>
+
 let mapleader='\'
 nmap <Leader>q :q<CR>
 nmap <Leader>e :NERDTreeTabsToggle<CR>
