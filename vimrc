@@ -120,6 +120,9 @@ set completeopt-=preview
 "
 "let g:SuperTabDefaultCompletionType='<c-x><c-u><c-p>'
 
+highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+match ExtraWhitespace /\s\+$\| \+\ze\t/
+
 if &term =~? 'xterm'
 	set t_ut=
 	set t_Co=256
