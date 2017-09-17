@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+set nocompatible
+
 set history=1000
 set wildmenu wildmode=longest:full,full
 set ruler showcmd
@@ -7,7 +9,6 @@ set backspace=indent,eol,start
 set whichwrap+=<,>,[,]
 set hlsearch incsearch magic
 set noerrorbells visualbell t_vb=
-set background=dark
 set encoding=utf8
 set nobackup nowritebackup noswapfile
 set smartcase
@@ -44,7 +45,7 @@ autocmd FileType cabal      setlocal expandtab
 autocmd Filetype html       setlocal ts=2 sts=2 sw=2
 autocmd Filetype xml        setlocal ts=2 sts=2 sw=2
 
-"autocmd BufReadPost * :DetectIndent
+autocmd BufReadPost * :DetectIndent
 
 autocmd QuickFixCmdPost [^l]* nested cwindow
 "autocmd QuickFixCmdPost make call ExecuteIfNoErrors()
@@ -96,6 +97,7 @@ nmap <Leader>q :q<CR>
 nmap <Leader>e :NERDTreeTabsToggle<CR>
 nmap <Leader>w :w !sudo tee % > /dev/null<CR><CR>
 nmap <Leader>p :make program<CR><CR>
+nmap <Leader>t :GundoToggle<CR>
 
 nmap Y y$
 nmap <C-J> <C-W>j
@@ -120,8 +122,11 @@ set completeopt-=preview
 "
 "let g:SuperTabDefaultCompletionType='<c-x><c-u><c-p>'
 
+let g:gundo_prefer_python3 = 1
+
 highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 match ExtraWhitespace /\s\+$\| \+\ze\t/
+
 
 if &term =~? 'xterm'
 	set t_ut=
@@ -130,8 +135,11 @@ if &term =~? 'xterm'
 	let g:badwolf_tabline = 2
 	colorscheme badwolf
 "	let g:solarized_termtrans = 1
+"	let g:solarized_termcolors = 256
 "	colorscheme solarized
 	set cursorline
 "else
 "	colorscheme evening
 endif
+
+set background=dark
