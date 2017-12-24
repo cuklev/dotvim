@@ -126,18 +126,6 @@ set langmap=чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕР
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 set completeopt-=preview
 
-"let g:syntastic_c_compiler_options = '-std=gnu11'
-"let g:syntastic_cpp_compiler_options = '-std=gnu++1z'
-"
-""set conceallevel=2
-""set concealcursor=vin
-"let g:clang_snippets=1
-"let g:clang_conceal_snippets=1
-"let g:clang_snippets_engine='clang_complete'
-"let g:clang_user_options = '-std=gnu++1z'
-"
-"let g:SuperTabDefaultCompletionType='<c-x><c-u><c-p>'
-
 let g:gundo_prefer_python3 = 1
 
 highlight ExtraWhitespace ctermbg=darkred guibg=darkred
