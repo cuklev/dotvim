@@ -68,26 +68,42 @@ function! ExecuteIfNoErrors()
 endfunction
 
 function! ExecuteFile()
-	if &filetype == "sh"
-		write
-		!bash '%'
-	elseif &filetype == "python"
-		write
-		!python '%'
-	elseif &filetype == "javascript"
-		write
-		!node '%'
-	elseif &filetype == "c" || &filetype == "cpp" || &filetype == "haskell" || &filetype == "rust"
-		!'%:p:r'
-	elseif &filetype == "cs"
-		!mono '%:p:r.exe'
+	if has('terminal')
+		if &filetype == "sh"
+			write
+			terminal bash "%"
+		elseif &filetype == "python"
+			write
+			terminal python "%"
+		elseif &filetype == "javascript"
+			write
+			terminal node "%"
+		elseif &filetype == "c" || &filetype == "cpp" || &filetype == "haskell" || &filetype == "rust"
+			terminal "%:p:r"
+		elseif &filetype == "cs"
+			terminal mono "%:p:r.exe"
+		endif
+	else " TODO: remove dublicated stuff here
+		if &filetype == "sh"
+			write
+			!bash "%"
+		elseif &filetype == "python"
+			write
+			!python "%"
+		elseif &filetype == "javascript"
+			write
+			!node "%"
+		elseif &filetype == "c" || &filetype == "cpp" || &filetype == "haskell" || &filetype == "rust"
+			!"%:p:r"
+		elseif &filetype == "cs"
+			!mono "%:p:r.exe"
+		endif
 	endif
 endfunction
 
 nmap <F8> :w<CR>:make -O2<CR><CR>
 nmap <F9> :w<CR>:make<CR><CR>:call ExecuteIfNoErrors()<CR>
 nmap <F10> :call ExecuteFile()<CR>
-"nmap <C-D> :ConqueTermSplit zsh<CR>
 nmap <Tab> mtgg=G't
 
 nmap  :noh<CR>
