@@ -107,6 +107,7 @@ nmap <F10> :call ExecuteFile()<CR>
 nmap <Tab> mtgg=G't
 
 nmap  :noh<CR>
+nmap <C-D> :terminal ++close<CR>
 
 let mapleader='\'
 nmap <Leader>q :q<CR>
