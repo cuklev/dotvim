@@ -16,7 +16,7 @@ set showfulltag
 set scrolloff=5 sidescrolloff=5
 set hidden
 set number
-set smartindent autoindent smarttab cindent
+set smartindent autoindent smarttab cindent cinoptions=g0,N-s,E-s
 set autoread
 set ts=4 sw=4 sts=4
 set mouse=a
