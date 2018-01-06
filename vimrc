@@ -32,6 +32,7 @@ else
 	autocmd FileType haskell    setlocal makeprg=ghc\ --make\ '%'
 	autocmd Filetype cs         setlocal makeprg=mcs\ '%'\ -r:System.Numerics
 	autocmd Filetype rust		setlocal makeprg=rustc\ '%'\ -o\ '%:r'
+	autocmd Filetype ocaml		setlocal makeprg=ocamlc\ '%'\ -o\ '%:r'
 
 	autocmd FileType sh         setlocal makeprg=true
 	autocmd FileType python     setlocal makeprg=true
@@ -78,7 +79,7 @@ function! ExecuteFile()
 		elseif &filetype == "javascript"
 			write
 			terminal node "%"
-		elseif &filetype == "c" || &filetype == "cpp" || &filetype == "haskell" || &filetype == "rust"
+		elseif &filetype == "c" || &filetype == "cpp" || &filetype == "haskell" || &filetype == "rust" || &filetype == "ocaml"
 			terminal "%:p:r"
 		elseif &filetype == "cs"
 			terminal mono "%:p:r.exe"
@@ -93,7 +94,7 @@ function! ExecuteFile()
 		elseif &filetype == "javascript"
 			write
 			!node "%"
-		elseif &filetype == "c" || &filetype == "cpp" || &filetype == "haskell" || &filetype == "rust"
+		elseif &filetype == "c" || &filetype == "cpp" || &filetype == "haskell" || &filetype == "rust" || &filetype == "ocaml"
 			!"%:p:r"
 		elseif &filetype == "cs"
 			!mono "%:p:r.exe"
