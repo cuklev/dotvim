@@ -32,7 +32,7 @@ else
 	autocmd FileType haskell    setlocal makeprg=ghc\ --make\ '%'
 	autocmd Filetype cs         setlocal makeprg=mcs\ '%'\ -r:System.Numerics
 	autocmd Filetype rust		setlocal makeprg=rustc\ '%'\ -o\ '%:r'
-	autocmd Filetype ocaml		setlocal makeprg=ocamlc\ '%'\ -o\ '%:r'
+	autocmd Filetype ocaml		setlocal makeprg=ocamlopt\ '%'\ -o\ '%:r'
 
 	autocmd FileType sh         setlocal makeprg=true
 	autocmd FileType python     setlocal makeprg=true
