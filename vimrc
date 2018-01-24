@@ -25,22 +25,12 @@ set background=dark
 
 syntax enable
 
-if filereadable("Makefile")
-	setlocal makeprg=make
-else
-	autocmd FileType c          setlocal makeprg=gcc\ '%'\ -o\ '%:r'\ -std=gnu11\ -Wall
-	autocmd FileType cpp        setlocal makeprg=g++\ '%'\ -o\ '%:r'\ -std=gnu++1z\ -Wall
-	autocmd FileType haskell    setlocal makeprg=ghc\ --make\ '%'
-	autocmd Filetype cs         setlocal makeprg=mcs\ '%'\ -r:System.Numerics
-	autocmd Filetype rust		setlocal makeprg=rustc\ '%'\ -o\ '%:r'
-	autocmd Filetype ocaml		setlocal makeprg=ocamlopt\ '%'\ -o\ '%:r'
-
-	autocmd FileType sh         setlocal makeprg=true
-	autocmd FileType python     setlocal makeprg=true
-	autocmd FileType javascript setlocal makeprg=true
-
-	autocmd Filetype markdown   setlocal makeprg=pandoc\ '%'\ -o\ '%:r.html'
-endif
+autocmd FileType c          setlocal makeprg=gcc\ '%'\ -o\ '%:r'\ -std=gnu11\ -Wall
+autocmd FileType cpp        setlocal makeprg=g++\ '%'\ -o\ '%:r'\ -std=gnu++1z\ -Wall
+autocmd FileType haskell    setlocal makeprg=ghc\ --make\ '%'
+autocmd Filetype cs         setlocal makeprg=mcs\ '%'\ -r:System.Numerics
+autocmd Filetype rust		setlocal makeprg=rustc\ '%'\ -o\ '%:r'
+autocmd Filetype ocaml		setlocal makeprg=ocamlopt\ '%'\ -o\ '%:r'
 
 autocmd FileType haskell    setlocal shellpipe=2> expandtab
 autocmd FileType cabal      setlocal expandtab
