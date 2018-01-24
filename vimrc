@@ -21,6 +21,7 @@ set autoread
 set ts=4 sw=4 sts=4
 set mouse=a
 set timeoutlen=200
+set background=dark
 
 syntax enable
 
@@ -147,5 +148,3 @@ if &term =~? 'xterm'
 "else
 "	colorscheme evening
 endif
-
-set background=dark
