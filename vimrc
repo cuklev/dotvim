@@ -34,6 +34,7 @@ autocmd Filetype ocaml		setlocal makeprg=ocamlopt\ '%'\ -o\ '%:r'
 
 autocmd FileType haskell    setlocal shellpipe=2> expandtab
 autocmd FileType cabal      setlocal expandtab
+autocmd FileType python     setlocal expandtab
 autocmd Filetype html       setlocal ts=2 sts=2 sw=2
 autocmd Filetype xml        setlocal ts=2 sts=2 sw=2
 
