@@ -106,7 +106,8 @@ let mapleader='\'
 nmap <Leader>q :q<CR>
 nmap <Leader>e :NERDTreeTabsToggle<CR>
 nmap <Leader>w :w !sudo tee % > /dev/null<CR><CR>
-nmap <Leader>t :GundoToggle<CR>
+nmap <Leader>g :GundoToggle<CR>
+nmap <Leader>t :GhcModType<CR>
 
 nmap Y y$
 nmap <C-J> <C-W>j
