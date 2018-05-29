@@ -115,6 +115,8 @@ nmap <C-K> <C-W>k
 nmap <C-L> <C-W>l
 nmap <C-H> <C-W>h
 
+tmap <ScrollWheelUp> <C-W>N<ScrollWheelUp>
+
 set langmap=чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
