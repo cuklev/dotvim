@@ -23,6 +23,9 @@ set mouse=a
 set timeoutlen=200
 set background=dark
 
+highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+match ExtraWhitespace /\s\+$\| \+\t\s\+\|\t\+\ \s\+/
+
 syntax enable
 
 autocmd FileType c       setlocal makeprg=gcc\ '%'\ -o\ '%:r'\ -std=gnu11\ -Wall
@@ -123,10 +126,6 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 set completeopt-=preview
 
 let g:gundo_prefer_python3 = 1
-
-highlight ExtraWhitespace ctermbg=darkred guibg=darkred
-match ExtraWhitespace /\s\+$\| \+\ze\t/
-
 
 if &term =~? 'xterm'
 	set t_ut=
