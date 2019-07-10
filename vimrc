@@ -124,6 +124,13 @@ tmap <ScrollWheelUp> <C-W>N<ScrollWheelUp>
 
 set langmap=чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM
 
+let g:ale_linters = {
+\	'haskell': ['stack-ghc', 'hlint']
+\}
+let g:ale_linters_explicit = 1
+let g:ale_sign_warning = '--'
+let g:ale_sign_column_always = 1
+
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 set completeopt-=preview
 
