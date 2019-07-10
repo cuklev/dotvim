@@ -104,7 +104,7 @@ nmap <F9> :w<CR>:make<CR><CR>:call ExecuteIfNoErrors()<CR>
 nmap <F10> :call ExecuteFile()<CR>
 nmap <Tab> mtgg=G't
 
-nmap  :noh<CR>
+nmap <C-_> :noh<CR>
 nmap <C-D> :terminal ++close<CR>
 
 let mapleader='\'
