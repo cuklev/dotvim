@@ -22,7 +22,7 @@ set ts=4 sw=4 sts=4
 set mouse=a
 set timeoutlen=200
 set background=dark
-set list listchars=tab:>-
+set list listchars=tab:<->
 set path+=**
 set clipboard=unnamed
 
