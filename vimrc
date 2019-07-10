@@ -24,6 +24,7 @@ set timeoutlen=200
 set background=dark
 set list listchars=tab:>-
 set path+=**
+set clipboard=unnamed
 
 highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 match ExtraWhitespace /\s\+$\| \+\t\s\+\|\t\+\ \s\+/
